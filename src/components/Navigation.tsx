@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import Mule from '../../public/mule.svg'
 import {
   CalendarIcon,
   ChartPieIcon,
@@ -10,9 +12,9 @@ import {
 import clsx from 'clsx'
 
 const navigation = [
-  { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-  { name: 'Products', href: '#', icon: UsersIcon, current: false },
-  { name: 'Vendors', href: '#', icon: UsersIcon, current: false },
+  { name: 'Dashboard', href: '/dashboard', icon: HomeIcon, current: true },
+  { name: 'Stash', href: '/stash', icon: UsersIcon, current: false },
+  { name: 'Vendors', href: '/vendors', icon: UsersIcon, current: false },
   { name: 'Deliveries', href: '#', icon: TruckIcon, current: false },
   { name: 'Transactions', href: '#', icon: FolderIcon, current: false },
   { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
@@ -25,11 +27,8 @@ export default function Navigation() {
       {/* Sidebar component, swap this element with another sidebar if you like */}
       <div className="bg-eerie flex grow flex-col gap-y-5 overflow-y-auto border-r border-r-white/10 px-6 pb-4">
         <div className="flex h-16 shrink-0 items-center">
-          <img
-            className="h-8 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-            alt="Your Company"
-          />
+          <h5 className="text-sm text-gray-500">Mulez Administration</h5>
+          {/* <Image src={Mule} alt="Mule" /> */}
         </div>
         <nav className="flex flex-1 flex-col">
           <ul role="list" className="flex flex-1 flex-col gap-y-7">
