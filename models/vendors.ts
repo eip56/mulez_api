@@ -42,6 +42,6 @@ const vendorSchema = new Schema(
   { timestamps: true },
 )
 
-const Vendor = models.Product || model('Vendor', vendorSchema)
+const Vendor = models.Vendor || model('Vendor', vendorSchema)
 
 export default Vendor

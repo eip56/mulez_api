@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import dbConnect from '@/lib/db'
 import Navigation from '@/components/Navigation'
 import clsx from 'clsx'
 import './globals.css'
@@ -16,6 +17,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  dbConnect()
+
   return (
     <html lang="en" className="h-full bg-mainbg">
       <body className={clsx(inter.className, 'h-full')}>

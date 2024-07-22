@@ -1,7 +1,7 @@
 'use client'
 import TextField from '@/components/TextField/TextField'
 import Select from '@/components/Select/Select'
-import { createVendor } from '../../../../_actions/vendorActions'
+// import { createVendor } from '../../../../_actions/vendorActions'
 
 // @todo add addresses multiple with primary
 // @todo add phone number field
@@ -38,7 +38,7 @@ export default function CreateVendor() {
     //   phone: formData.get('phone') as string,
     // }
 
-    createVendor(data)
+    // createVendor(data)
   }
 
   return (
