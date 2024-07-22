@@ -1,7 +1,7 @@
 'use client'
 import TextField from '@/components/TextField/TextField'
 import Select from '@/components/Select/Select'
-// import { createVendor } from '../../../../_actions/vendorActions'
+import { createVendor } from '../../../../_actions/vendorActions'
 
 // @todo add addresses multiple with primary
 // @todo add phone number field
@@ -25,20 +25,7 @@ export default function CreateVendor() {
     e.preventDefault()
     const formData = new FormData(e.target as HTMLFormElement)
     const data = Object.fromEntries(formData)
-
-    // const data = {
-    //   name: formData.get('name') as string,
-    //   slug: formData.get('slug') as string,
-    //   website: formData.get('website') as string,
-    //   license: formData.get('license') as string,
-    //   tap: formData.get('tap') as string,
-    //   type: formData.get('type') as string,
-    //   contact: formData.get('contact') as string,
-    //   email: formData.get('email') as string,
-    //   phone: formData.get('phone') as string,
-    // }
-
-    // createVendor(data)
+    createVendor(data)
   }
 
   return (

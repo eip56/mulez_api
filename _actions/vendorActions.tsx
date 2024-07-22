@@ -4,39 +4,28 @@ import Vendor from '../models/vendors'
 export async function getVendors() {
   try {
     const vendors = await Vendor.find()
-    return { msg: 'GET', vendors }
+    return { vendors }
   } catch (error: any) {
     return { errMsg: error.message }
   }
 }
 
-// export async function createVendor(props) {
-//   try {
-//     await connectDB()
+export async function createVendor(formData: any) {
+  try {
+    const vendor = new Vendor({
+      name: formData.name,
+      slug: formData.slug,
+      website: formData.website,
+      license: formData.license,
+      tap: formData.tap, //change to UBI
+      type: formData.type,
+      contact: formData.contact,
+      email: formData.email,
+      phone: formData.phone,
+    })
 
-//     // const vendor = new Vendor({
-//     //   name: props.name,
-//     //   slug: props.slug,
-//     //   website: props.website,
-//     //   license: props.license,
-//     //   tap: props.tap,
-//     //   type: props.type,
-//     //   contact: props.contact,
-//     //   email: props.email,
-//     //   phone: props.phone,
-//     // })
-
-//     // const newVendor = await vendor.save()
-
-//     console.log(props)
-
-//     // const vendors = await VendorModel.find()
-//     //return { msg: 'Vendor Saved', newVendor }
-//   } catch (error: any) {
-//     return { errMsg: error.message }
-//   }
-
-//   // connectDB()
-//   // const products = await ProductModel.find()
-//   // return products
-// }
+    const newVendor = await vendor.save()
+  } catch (error: any) {
+    return { errMsg: error.message }
+  }
+}

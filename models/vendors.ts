@@ -2,7 +2,7 @@ import { Schema, model, models } from 'mongoose'
 
 const vendorSchema = new Schema(
   {
-    name: {
+    companyName: {
       type: String,
       required: true,
     },
@@ -11,6 +11,14 @@ const vendorSchema = new Schema(
       required: true,
       unique: true,
     },
+    companyAddress: {
+      type: String,
+      required: true,
+    },
+    companyMailingAddress: {
+      type: String,
+      required: true,
+    },
     website: {
       type: String,
     },
@@ -18,7 +26,7 @@ const vendorSchema = new Schema(
       type: String,
       required: true,
     },
-    tap: {
+    ubi: {
       type: String,
       required: true,
     },
@@ -26,7 +34,11 @@ const vendorSchema = new Schema(
       type: Number,
       required: true,
     },
-    contact: {
+    firstName: {
+      type: String,
+      required: true,
+    },
+    lastName: {
       type: String,
       required: true,
     },
@@ -38,8 +50,30 @@ const vendorSchema = new Schema(
       type: String,
       required: true,
     },
+    active: {
+      type: Boolean,
+      default: false,
+    },
   },
-  { timestamps: true },
+  {
+    timestamps: true,
+    toJSON: {
+      virtuals: true,
+      versionKey: false,
+      transform: (doc, ret) => {
+        ret.id = ret._id
+        delete ret._id
+      },
+    },
+    toObject: {
+      virtuals: true,
+      versionKey: false,
+      transform: (doc, ret) => {
+        ret.id = ret._id
+        delete ret._id
+      },
+    },
+  },
 )
 
 const Vendor = models.Vendor || model('Vendor', vendorSchema)

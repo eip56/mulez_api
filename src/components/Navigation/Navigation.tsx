@@ -1,8 +1,8 @@
-import Image from 'next/image'
-import Mule from '../../public/mule.svg'
+'use client'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 import {
   CalendarIcon,
-  ChartPieIcon,
   Cog6ToothIcon,
   FolderIcon,
   HomeIcon,
@@ -12,16 +12,19 @@ import {
 import clsx from 'clsx'
 
 const navigation = [
-  { name: 'Dashboard', href: '/dashboard', icon: HomeIcon, current: true },
-  { name: 'Stash', href: '/stash', icon: UsersIcon, current: false },
-  { name: 'Vendors', href: '/vendors', icon: UsersIcon, current: false },
-  { name: 'Deliveries', href: '#', icon: TruckIcon, current: false },
-  { name: 'Transactions', href: '#', icon: FolderIcon, current: false },
-  { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
-  { name: 'Reports', href: '#', icon: ChartPieIcon, current: false },
+  { name: 'Dashboard', href: '/dashboard', icon: HomeIcon },
+  { name: 'Tracking', href: '/tracking', icon: TruckIcon },
+  { name: 'Invoices', href: '/invoices', icon: FolderIcon },
+  { name: 'Stash', href: '/stash', icon: UsersIcon },
+  { name: 'Vendors', href: '/vendors', icon: UsersIcon },
+  { name: 'Team', href: '/team', icon: UsersIcon },
+  { name: 'Fleet', href: '/fleet', icon: UsersIcon },
+  { name: 'Scheduling', href: '/scheduling', icon: CalendarIcon },
 ]
 
 export default function Navigation() {
+  const pathname = usePathname()
+
   return (
     <div className="hidden bg-back lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-60 lg:flex-col">
       {/* Sidebar component, swap this element with another sidebar if you like */}
@@ -36,13 +39,11 @@ export default function Navigation() {
               <ul role="list" className="-mx-2 space-y-1">
                 {navigation.map((item) => (
                   <li key={item.name}>
-                    <a
+                    <Link
                       href={item.href}
                       className={clsx(
-                        item.current
-                          ? 'bg-gray-800 text-white'
-                          : 'text-gray-400 hover:bg-gray-800 hover:text-white',
-                        'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6',
+                        'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-gray-800 hover:text-white',
+                        { 'bg-gray-800 text-white': pathname === item.href },
                       )}
                     >
                       <item.icon
@@ -50,7 +51,7 @@ export default function Navigation() {
                         aria-hidden="true"
                       />
                       {item.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

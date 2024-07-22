@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import dbConnect from '@/lib/db'
-import Navigation from '@/components/Navigation'
+import Navigation from '@/components/Navigation/Navigation'
 import clsx from 'clsx'
 import './globals.css'
 
@@ -12,12 +12,13 @@ export const metadata: Metadata = {
   description: 'Mulez Administration',
 }
 
-export default function RootLayout({
+// @TODO add suspense for the dbconnect
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  dbConnect()
+  await dbConnect()
 
   return (
     <html lang="en" className="h-full bg-mainbg">
