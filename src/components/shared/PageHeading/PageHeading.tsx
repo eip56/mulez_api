@@ -1,6 +1,14 @@
 import { PlusIcon } from '@heroicons/react/20/solid'
 
-export default function PageHeading({ title, action }) {
+interface Props {
+  title: string
+  action?: {
+    label: string
+    onClick: () => void
+  }
+}
+
+export default function PageHeading({ title, action }: Props) {
   return (
     <div className="lg:flex lg:items-center lg:justify-between">
       <div className="min-w-0 flex-1">

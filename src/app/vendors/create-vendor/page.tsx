@@ -1,6 +1,6 @@
 'use client'
-import TextField from '@/components/TextField/TextField'
-import Select from '@/components/Select/Select'
+import TextField from '@/components/shared/TextField/TextField'
+import Select from '@/components/shared/Select/Select'
 import { createVendor } from '../../../../_actions/vendorActions'
 
 // @todo add addresses multiple with primary

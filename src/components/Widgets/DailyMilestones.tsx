@@ -69,8 +69,6 @@ const DailyMilestones = () => {
 
     const xAxis = d3.axisBottom(x)
 
-    console.log(x.bandwidth() / 3)
-
     svg.append('g').attr('transform', `translate(${margin.left},${margin.top})`)
 
     svg
