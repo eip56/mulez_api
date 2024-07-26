@@ -16,6 +16,7 @@ const config: Config = {
       },
       colors: {
         lbg: '#121212',
+        'card-bg': '#191919',
       },
     },
   },

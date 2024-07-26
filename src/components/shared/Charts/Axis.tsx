@@ -1,4 +1,3 @@
-// components/Axes.tsx
 import React, { useEffect, useRef } from 'react'
 import * as d3 from 'd3'
 
@@ -11,6 +10,7 @@ interface AxisProps {
 /**
  * Axes component to render chart axes using D3.
  *
+ * @path components/Axes.tsx
  * @param scale - The scale function for the axis.
  * @param transform - The transformation string to position the axis.
  * @param orient - The orientation of the axis ('bottom', 'left', 'right', 'top').

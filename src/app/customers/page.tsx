@@ -1,4 +1,3 @@
-import PageHeading from '@/components/shared/PageHeading/PageHeading'
 import SimpleTable from '@/components/shared/Table/SimpleTable'
 import { EyeIcon, EllipsisHorizontalIcon } from '@heroicons/react/24/outline'
 import { calculateAge } from '@/lib/value-formatters'
@@ -54,7 +53,7 @@ export default function Employees() {
 
   return (
     <div className="mx-auto p-10">
-      <PageHeading title={PAGE_TITLE} />
+      {/* <PageHeading title={PAGE_TITLE} /> */}
 
       <div className="max-h-[50vh] overflow-y-auto">
         <SimpleTable

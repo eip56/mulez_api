@@ -1,5 +1,3 @@
-import { PlusIcon } from '@heroicons/react/20/solid'
-import PageHeading from '@/components/shared/PageHeading/PageHeading'
 import SimpleTable from '@/components/shared/Table/SimpleTable'
 
 const tabs = [
@@ -48,7 +46,7 @@ const people = [
 export default function Employees() {
   return (
     <div className="mx-auto max-w-7xl py-10">
-      <PageHeading
+      {/* <PageHeading
         title={PAGE_TITLE}
         action={{ label: 'Create Team Member' }}
       />
@@ -69,7 +67,7 @@ export default function Employees() {
             ))}
           </nav>
         </div>
-      </div>
+      </div> */}
 
       {/* <SimpleTable headers={headers} data={people} /> */}
     </div>

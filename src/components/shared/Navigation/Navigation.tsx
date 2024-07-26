@@ -28,7 +28,7 @@ export default function Navigation() {
   const pathname = usePathname()
 
   return (
-    <div className="bg-lbg hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-60 lg:flex-col">
+    <div className="hidden bg-lbg lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-60 lg:flex-col">
       {/* Sidebar component, swap this element with another sidebar if you like */}
       <div className="bg-eerie flex grow flex-col gap-y-5 overflow-y-auto border-r border-r-white/10 px-6 pb-4">
         <div className="flex h-16 shrink-0 items-center">
@@ -44,14 +44,14 @@ export default function Navigation() {
                     <Link
                       href={item.href}
                       className={clsx(
-                        'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-gray-800 hover:text-white',
+                        'group flex gap-x-3 rounded-md p-2 text-sm leading-6 text-gray-500 hover:bg-gray-800 hover:text-white',
                         { 'bg-gray-800 text-white': pathname === item.href },
                       )}
                     >
-                      <item.icon
+                      {/* <item.icon
                         className="h-6 w-6 shrink-0"
                         aria-hidden="true"
-                      />
+                      /> */}
                       {item.name}
                     </Link>
                   </li>
