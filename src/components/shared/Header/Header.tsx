@@ -1,11 +1,12 @@
+import { HeaderProps } from '.'
 import Title from './HeaderTitle'
+import SubNavigation from './SubNavigation'
+import HeaderStats from './HeaderStats'
 
-interface Props {
-  children: React.ReactNode
-}
-
-export default function Header({ children }: Props) {
-  return <div className="PageHeading mb-10">{children}</div>
+export default function Header({ children }: HeaderProps) {
+  return <header>{children}</header>
 }
 
 Header.Title = Title
+Header.SubNavigation = SubNavigation
+Header.Stats = HeaderStats
