@@ -19,11 +19,11 @@
  * @returns {string} The formatted current date and time.
  */
 export function getCurrentDateTime(
-  includeYear: boolean = true,
-  includeMonth: boolean = true,
-  includeDay: boolean = true,
-  includeHour: boolean = true,
-  includeMinute: boolean = true,
+  includeYear: boolean = false,
+  includeMonth: boolean = false,
+  includeDay: boolean = false,
+  includeHour: boolean = false,
+  includeMinute: boolean = false,
   includeSecond: boolean = false,
   hour12: boolean = true,
   yearLength: 'numeric' | '2-digit' = 'numeric',
@@ -32,8 +32,9 @@ export function getCurrentDateTime(
   hourLength: 'numeric' | '2-digit' = 'numeric',
   minuteLength: 'numeric' | '2-digit' = 'numeric',
   secondLength: 'numeric' | '2-digit' = 'numeric',
+  value: string
 ): string {
-  const now: Date = new Date()
+  const now: Date = new Date(value)
   const options: Intl.DateTimeFormatOptions = {}
 
   if (includeYear) options.year = yearLength
@@ -70,8 +71,40 @@ export function formatDate(datetime: string): string {
   const options: Intl.DateTimeFormatOptions = {
     year: 'numeric',
     month: 'short',
-    day: '2-digit',
+    day: '2-digit'
   }
 
   return date.toLocaleDateString('en-US', options)
 }
+
+/**
+ * Formats a datetime string to a "9:34 AM" format.
+ *
+ * This function takes a datetime string and returns the hour and minutes
+ * in the format "9:34 AM" without leading zeros for the hours.
+ *
+ * @param {string} datetime - The datetime string to be formatted.
+ * @returns {string} The formatted time string.
+ * @throws {Error} Throws an error if the input is not a valid datetime string.
+ *
+ * @example
+ * formatTime('2024-07-30T09:34:00.000Z') // returns "9:34 AM"
+ */
+export function formatTime(datetime: string): string {
+  const date = new Date(datetime)
+
+  if (isNaN(date.getTime())) {
+    throw new Error('Invalid datetime string')
+  }
+
+  const options: Intl.DateTimeFormatOptions = {
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: true
+  }
+
+  return date.toLocaleString('en-US', options)
+}
+
+// Example usage:
+console.log(formatTime('2024-07-30T09:34:00.000Z')) // Output: "9:34 AM"

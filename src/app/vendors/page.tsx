@@ -1,11 +1,15 @@
+import { Header } from '@/components/shared'
 import Link from 'next/link'
-import { getVendors } from '../../../_actions/vendorActions'
 
 export default async function Vendors() {
-  const { vendors } = await getVendors()
-
   return (
-    <div className="mx-auto max-w-7xl">
+    <div>
+      <Header>
+        <Header.Title
+          title={'Vendors Overview'}
+          description={'General overview of all vendors and their status.'}
+        />
+      </Header>
       <div className="py-10">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="sm:flex sm:items-center">
@@ -77,7 +81,7 @@ export default async function Vendors() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-800">
-                    {vendors?.map((v) => (
+                    {[]?.map((v) => (
                       <tr key={v.id}>
                         <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-white sm:pl-0">
                           {v.name}

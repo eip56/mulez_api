@@ -1,7 +1,7 @@
 'use client'
 import TextField from '@/components/shared/TextField/TextField'
 import Select from '@/components/shared/Select/Select'
-import { createVendor } from '../../../../_actions/vendorActions'
+// import { createVendor } from '../../../../_actions/vendorActions'
 
 // @todo add addresses multiple with primary
 // @todo add phone number field
@@ -25,7 +25,7 @@ export default function CreateVendor() {
     e.preventDefault()
     const formData = new FormData(e.target as HTMLFormElement)
     const data = Object.fromEntries(formData)
-    createVendor(data)
+    // createVendor(data)
   }
 
   return (

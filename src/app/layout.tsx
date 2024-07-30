@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import dbConnect from '@/lib/db'
 import Navigation from '@/components/shared/Navigation/Navigation'
+import { GlobalContextProvider } from '@/context/Global/global-context'
 import clsx from 'clsx'
 import './globals.css'
 
@@ -21,10 +22,9 @@ export default async function RootLayout({
   await dbConnect()
 
   return (
-    <html lang="en" className="bg-lbg h-full">
-      <body className={clsx(inter.className, 'h-full')}>
-        <Navigation />
-        <main className="h-full lg:pl-60">{children}</main>
+    <html lang="en" className="h-screen">
+      <body className={clsx('bg-light h-screen', inter.className)}>
+        <GlobalContextProvider>{children}</GlobalContextProvider>
       </body>
     </html>
   )

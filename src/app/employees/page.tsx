@@ -1,3 +1,4 @@
+import { Header } from '@/components/shared'
 import SimpleTable from '@/components/shared/Table/SimpleTable'
 
 const tabs = [
@@ -45,11 +46,15 @@ const people = [
 
 export default function Employees() {
   return (
-    <div className="mx-auto max-w-7xl py-10">
-      {/* <PageHeading
-        title={PAGE_TITLE}
-        action={{ label: 'Create Team Member' }}
-      />
+    <div className="">
+      <Header>
+        <Header.Title
+          title={'Employees Overview'}
+          description={'General overview of all Employees and their status.'}
+        />
+      </Header>
+
+      {/*
       <div className="border-b border-gray-200 pb-5 sm:pb-0">
         <div className="mt-8">
           <nav className="-mb-px flex space-x-8">

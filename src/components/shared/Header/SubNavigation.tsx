@@ -12,7 +12,7 @@ export default function SubNavigation({ links }: SubNavigationProps) {
           <li key={item.name}>
             <Link
               href={item.href}
-              className={item.current ? 'text-indigo-400' : ''}
+              className={item.current ? 'text-[#09F0B0]' : ''}
             >
               {item.name}
             </Link>
