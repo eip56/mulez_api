@@ -1,4 +1,4 @@
-import { Navigation } from '@/components/shared'
+import { Navigation } from '@/components'
 
 export default function Layout({ children }) {
   return (

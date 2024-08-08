@@ -1,22 +1,15 @@
+import DailyOrders from '@/features/Dashboard/DailyOrders'
+
 export default function Dashboard() {
   return (
-    <>
-      <div className="h-full">
-        <div className="h-full py-8">
-          <div className="flex gap-4 px-8">
-            <div className="flex-1">
-              <div className="grid grid-cols-2 gap-5">
-                {/* <TotalSales />
-                <CurrentSessions /> */}
-              </div>
-              <div className="mt-8 rounded-md bg-accent px-4 py-2">
-                {/* <DailyMilestones /> */}
-              </div>
-            </div>
-            <div className="w-1/3 flex-initial">{/* <DailyStatus /> */}</div>
-          </div>
+    <div className="DeliveriesPage flex h-screen flex-col gap-5 overflow-hidden">
+      <div className="p-4">
+        <div className="grid h-28 max-h-28 flex-initial grid-cols-4 gap-5">
+          <DailyOrders />
         </div>
+
+        <div className="grow"></div>
       </div>
-    </>
+    </div>
   )
 }

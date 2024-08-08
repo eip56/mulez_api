@@ -15,7 +15,7 @@ const GlobalContext = React.createContext<IState | null>(null)
 
 export function GlobalContextProvider({ children }: Props) {
   const [state, dispatch]: any = React.useReducer(reducer, {
-    sidebar: true,
+    sidebar: false
   }) as IState[]
 
   /**
@@ -30,14 +30,12 @@ export function GlobalContextProvider({ children }: Props) {
   const value: any = React.useMemo(
     () => ({
       sidebar: state.sidebar,
-      setSidebar,
+      setSidebar
     }),
-    [state, setSidebar],
+    [state, setSidebar]
   )
 
-  return (
-    <GlobalContext.Provider value={value}>{children}</GlobalContext.Provider>
-  )
+  return <GlobalContext.Provider value={value}>{children}</GlobalContext.Provider>
 }
 
 export const useGlobalContext = () => {

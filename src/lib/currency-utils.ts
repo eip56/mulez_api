@@ -13,9 +13,9 @@
  * formatCurrency(39.39) // returns "$ 39.39"
  * formatCurrency(5.5)   // returns "$ 5.50"
  */
-function formatCurrency(value: number): string {
+export function formatCurrency(value: number): string {
   if (isNaN(value)) {
     throw new Error('Input must be a number')
   }
-  return '&#36; ' + value.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  return '$ ' + value.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 }

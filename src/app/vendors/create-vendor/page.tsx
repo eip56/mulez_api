@@ -1,6 +1,6 @@
 'use client'
-import TextField from '@/components/shared/TextField/TextField'
-import Select from '@/components/shared/Select/Select'
+import TextField from '@/components/TextField/TextField'
+import Select from '@/components/Select/Select'
 // import { createVendor } from '../../../../_actions/vendorActions'
 
 // @todo add addresses multiple with primary
@@ -17,7 +17,7 @@ const types = [
   { label: 'Cannabis Research Laboratory', value: 6 },
   { label: 'Cannabis Testing Laboratory', value: 7 },
   { label: 'Integrated Cannabis Microbusiness (MICB)', value: 8 },
-  { label: 'Certically Integrated Cannabis Establishment (VICE)', value: 9 },
+  { label: 'Certically Integrated Cannabis Establishment (VICE)', value: 9 }
 ]
 
 export default function CreateVendor() {
@@ -31,10 +31,7 @@ export default function CreateVendor() {
   return (
     <div className="p-8">
       <h1>Create Vendor Form</h1>
-      <form
-        className="grid max-w-xl grid-rows-10 gap-4"
-        onSubmit={handleSubmit}
-      >
+      <form className="grid max-w-xl grid-rows-10 gap-4" onSubmit={handleSubmit}>
         <div>
           <TextField label="Company name" type="text" name="name" />
         </div>
@@ -63,9 +60,7 @@ export default function CreateVendor() {
           <TextField label="Contact phone" type="tel" name="phone" />
         </div>
         <div className="mt-8 text-right">
-          <button className="rounded-md bg-blue-500 px-4 py-2 text-white">
-            Create Vendor
-          </button>
+          <button className="rounded-md bg-blue-500 px-4 py-2 text-white">Create Vendor</button>
         </div>
       </form>
     </div>

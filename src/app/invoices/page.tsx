@@ -1,4 +1,4 @@
-import { Header } from '@/components/shared'
+import { Header } from '@/components'
 import { ordersSubnavLinks } from '@/lib/constants'
 import { ScaleIcon } from '@heroicons/react/20/solid'
 import { EyeIcon } from '@heroicons/react/24/outline'

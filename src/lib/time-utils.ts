@@ -105,6 +105,3 @@ export function formatTime(datetime: string): string {
 
   return date.toLocaleString('en-US', options)
 }
-
-// Example usage:
-console.log(formatTime('2024-07-30T09:34:00.000Z')) // Output: "9:34 AM"

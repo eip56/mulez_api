@@ -1,10 +1,10 @@
 import { Header } from '@/components/shared'
-import SimpleTable from '@/components/shared/Table/SimpleTable'
+import SimpleTable from '@/components/Table/SimpleTable'
 
 const tabs = [
   { name: 'Overview', href: '#', current: false },
   { name: 'Team Members', href: '#', current: false },
-  { name: 'Applicants', href: '#', current: true },
+  { name: 'Applicants', href: '#', current: true }
 ]
 
 const PAGE_TITLE = 'Team Members'
@@ -14,7 +14,7 @@ const headers = [
   { label: 'Title' },
   { label: 'Email' },
   { label: 'Role' },
-  { label: 'Edit' },
+  { label: 'Edit' }
 ]
 
 const people = [
@@ -22,26 +22,26 @@ const people = [
     name: 'Eric Pantoja',
     title: 'Founder',
     email: 'eric@mulez.app',
-    role: 'Admin',
+    role: 'Admin'
   },
   {
     name: 'Tom Curtis',
     title: 'Founder',
     email: 'tom@mulez.app',
-    role: 'Admin',
+    role: 'Admin'
   },
   {
     name: 'Richard Blackford',
     title: 'Founder',
     email: 'rich@mulez.app',
-    role: 'Admin',
+    role: 'Admin'
   },
   {
     name: 'Mike Werner',
     title: 'Founder',
     email: 'mike@mulez.app',
-    role: 'Supervisor',
-  },
+    role: 'Supervisor'
+  }
 ]
 
 export default function Employees() {
