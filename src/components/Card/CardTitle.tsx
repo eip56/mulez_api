@@ -3,10 +3,10 @@ interface CardTitleProps {
   action?: React.ReactNode
 }
 
-export default function Title({ title, action }: CardTitleProps) {
+export default function CardTitle({ title, action }: CardTitleProps) {
   return (
-    <div className="CardTitle flex items-center px-6 py-4">
-      <h2 className="text-base text-white">{title}</h2>
+    <div className="CardTitle flex shrink items-center p-3">
+      <h6 className="text-base text-white">{title}</h6>
       {action && action}
     </div>
   )

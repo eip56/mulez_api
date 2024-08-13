@@ -19,6 +19,18 @@ export const Lunar = [
     ]
   },
   {
+    featureType: 'all',
+    elementType: 'labels',
+    stylers: [
+      {
+        visibility: 'off'
+      },
+      {
+        saturation: '-100'
+      }
+    ]
+  },
+  {
     featureType: 'water',
     elementType: 'geometry',
     stylers: [

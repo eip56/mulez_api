@@ -1,6 +1,6 @@
 import { Header } from '@/components'
 import { ordersSubnavLinks } from '@/lib/constants'
-import RecentOrders from '@/features/Orders/RecentOrders'
+import RecentOrders from '@/feature/Orders/RecentOrders'
 
 export default function Orders() {
   return (

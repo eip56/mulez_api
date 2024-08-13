@@ -1,9 +1,9 @@
 import { Header } from '@/components'
-import TotalProducts from '@/features/Inventory/TotalProducts'
-import TotalInventoryValue from '@/features/Inventory/TotalInventoryValue'
-import TopSellingProducts from '@/features/Inventory/TopSellingProducts'
-import ExpiringSoon from '@/features/Inventory/ExpiringSoon'
-import RecentlyActive from '@/features/Inventory/RecentlyActive'
+import TotalProducts from '@/feature/Inventory/TotalProducts'
+import TotalInventoryValue from '@/feature/Inventory/TotalInventoryValue'
+import TopSellingProducts from '@/feature/Inventory/TopSellingProducts'
+import ExpiringSoon from '@/feature/Inventory/ExpiringSoon'
+import RecentlyActive from '@/feature/Inventory/RecentlyActive'
 
 export default async function InventoryPage() {
   return (

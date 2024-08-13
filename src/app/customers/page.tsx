@@ -1,8 +1,8 @@
 import { Header } from '@/components'
-import TotalCustomers from '@/features/Customers/TotalCustomers'
-import NewCustomers from '@/features/Customers/NewCustomers'
-import ActiveNow from '@/features/Customers/ActiveNow'
-import RecentCustomers from '@/features/Customers/RecentCustomers'
+import TotalCustomers from '@/feature/Customers/TotalCustomers'
+import NewCustomers from '@/feature/Customers/NewCustomers'
+import ActiveNow from '@/feature/Customers/ActiveNow'
+import RecentCustomers from '@/feature/Customers/RecentCustomers'
 
 export default function CustomersPage() {
   return (

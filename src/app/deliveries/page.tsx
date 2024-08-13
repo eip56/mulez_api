@@ -1,5 +1,5 @@
 import { Header } from '@/components'
-import RecentDeliveries from '@/features/Deliveries/RecentDeliveries'
+import RecentDeliveries from '@/feature/Deliveries/RecentDeliveries'
 import { ordersSubnavLinks } from '@/lib/constants'
 
 export default function DeliveriesPage() {

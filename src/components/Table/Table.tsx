@@ -15,7 +15,7 @@ const tdStyles = 'whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-500'
 
 export default function Table({ title, colgroup, headers, renderRows, data }: IProps) {
   return (
-    <Card isTable>
+    <div>
       {title && <Card.Title title={title} />}
       <table className="min-w-full table-auto">
         {colgroup && (
@@ -25,7 +25,7 @@ export default function Table({ title, colgroup, headers, renderRows, data }: IP
             ))}
           </colgroup>
         )}
-        <thead className="bg-[#151516]">
+        <thead className="rounded-md bg-[#151516]">
           <tr>
             {headers?.map(({ key, label }) => (
               <th key={key} scope="col" className={thStyles}>
@@ -55,7 +55,7 @@ export default function Table({ title, colgroup, headers, renderRows, data }: IP
           )}
         </tbody>
       </table>
-    </Card>
+    </div>
   )
 }
 
