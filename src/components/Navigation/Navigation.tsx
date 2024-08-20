@@ -12,10 +12,13 @@ export default function Navigation() {
 
   return (
     <div
-      className={clsx('flex flex-none bg-[#121213] transition-all duration-200', {
-        'w-56': sidebar,
-        'w-[75px]': !sidebar
-      })}>
+      className={clsx(
+        'flex flex-none border-r border-r-white/5 bg-dark transition-all duration-200',
+        {
+          'w-56': sidebar,
+          'w-[75px]': !sidebar
+        }
+      )}>
       <nav className="flex flex-1 flex-col">
         <div
           className="flex items-center gap-4 border-b border-white/10 py-3 pl-[27.5px] text-white"

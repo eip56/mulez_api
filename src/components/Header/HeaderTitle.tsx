@@ -2,7 +2,7 @@ import { HeaderTitleProps } from '.'
 
 export default function Title({ title, description }: HeaderTitleProps) {
   return (
-    <div className="flex flex-shrink flex-col items-start justify-between gap-x-8 gap-y-4 px-4 py-4 sm:flex-row sm:items-center sm:px-6 lg:px-8">
+    <div className="flex flex-shrink flex-col items-start justify-between gap-x-8 gap-y-4 py-4">
       <div>
         <div className="flex items-center gap-x-3">
           <div className="flex-none rounded-full p-1">

@@ -1,5 +1,29 @@
-import { Header } from '@/components/shared'
-import SimpleTable from '@/components/Table/SimpleTable'
+import { Header } from '@/components'
+import EmployeeExpense from '@/feature/Employee/EmployeeExpense'
+import RecentlyActiveEmployees from '@/feature/Employee/RecentlyActiveEmployees'
+import UpcomingLeave from '@/feature/Employee/UpcomingLeave'
+
+export default function Employees() {
+  return (
+    <>
+      <Header>
+        <Header.Title
+          title={'Employee Overview'}
+          description={'General overview of all Employees and their status.'}
+        />
+      </Header>
+
+      <div className="grid grid-cols-2 gap-4">
+        <EmployeeExpense />
+        <UpcomingLeave />
+      </div>
+
+      <div className="flex-1">
+        <RecentlyActiveEmployees />
+      </div>
+    </>
+  )
+}
 
 const tabs = [
   { name: 'Overview', href: '#', current: false },
@@ -35,46 +59,5 @@ const people = [
     title: 'Founder',
     email: 'rich@mulez.app',
     role: 'Admin'
-  },
-  {
-    name: 'Mike Werner',
-    title: 'Founder',
-    email: 'mike@mulez.app',
-    role: 'Supervisor'
   }
 ]
-
-export default function Employees() {
-  return (
-    <div className="">
-      <Header>
-        <Header.Title
-          title={'Employees Overview'}
-          description={'General overview of all Employees and their status.'}
-        />
-      </Header>
-
-      {/*
-      <div className="border-b border-gray-200 pb-5 sm:pb-0">
-        <div className="mt-8">
-          <nav className="-mb-px flex space-x-8">
-            {tabs.map((tab) => (
-              <a
-                key={tab.name}
-                href={tab.href}
-                aria-current={tab.current ? 'page' : undefined}
-                className={
-                  'whitespace-nowrap border-b-2 border-transparent px-1 pb-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700'
-                }
-              >
-                {tab.name}
-              </a>
-            ))}
-          </nav>
-        </div>
-      </div> */}
-
-      {/* <SimpleTable headers={headers} data={people} /> */}
-    </div>
-  )
-}

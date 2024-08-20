@@ -1,4 +1,4 @@
-import { Header, Table, Chip } from '@/components/shared'
+import { Header, Table, Chip } from '@/components'
 import { EyeIcon, EllipsisHorizontalIcon } from '@heroicons/react/24/outline'
 
 export default async function Vendors() {

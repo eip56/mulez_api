@@ -24,14 +24,14 @@ export default async function Dashboard() {
         </div>
       </div>
 
-      <div className="flex grow gap-4 overflow-hidden">
+      {/* <div className="flex grow gap-4 overflow-hidden">
         <div className="flex-1">
           <LatestRoutes />
         </div>
         <div className="w-1/3 flex-initial">
           <RecentOrders />
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

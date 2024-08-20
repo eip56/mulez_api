@@ -7,13 +7,16 @@ interface IProps {
   headers: { key: string; label: string }[]
   colgroup?: string[]
   renderRows?: (row: any) => JSX.Element
+  actions?: Boolean
   data?: any[]
 }
 
-const thStyles = 'px-6 py-4 text-left text-xs font-medium text-[#F9F9F9]'
-const tdStyles = 'whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-500'
+//divide-y divide-white/[0.08]
+// th #151516 divide- #2E2E31
+const thStyles = 'px-6 py-3 text-left text-xs font-semibold text-[#8A8B8C]'
+const tdStyles = 'whitespace-nowrap px-6 py-2.5 text-sm text-slate-500'
 
-export default function Table({ title, colgroup, headers, renderRows, data }: IProps) {
+export default function Table({ title, colgroup, headers, renderRows, data, actions }: IProps) {
   return (
     <div>
       {title && <Card.Title title={title} />}
@@ -25,17 +28,17 @@ export default function Table({ title, colgroup, headers, renderRows, data }: IP
             ))}
           </colgroup>
         )}
-        <thead className="rounded-md bg-[#151516]">
+        <thead className="bg-white/[0.025]">
           <tr>
             {headers?.map(({ key, label }) => (
               <th key={key} scope="col" className={thStyles}>
                 {label}
               </th>
             ))}
-            <th className={thStyles}>&nbsp;</th>
+            {actions && <th className={thStyles}>&nbsp;</th>}
           </tr>
         </thead>
-        <tbody className="divide-y divide-[#2E2E31]">
+        <tbody className="">
           {data?.map(d =>
             renderRows ? (
               renderRows(d)

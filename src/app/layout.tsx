@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   description: 'Mulez Administration'
 }
 
+// #121314 #19191C
 // @TODO add suspense for the dbconnect
 export default async function RootLayout({
   children
@@ -23,7 +24,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className="h-screen">
-      <body className={clsx('h-screen bg-[#1A1A1B]', inter.className)}>
+      <body className={clsx('bg-bg h-screen', inter.className)}>
         <GlobalContextProvider>{children}</GlobalContextProvider>
       </body>
     </html>

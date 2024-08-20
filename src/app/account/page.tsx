@@ -1,4 +1,4 @@
-import { AsideMenu } from '@/components/shared'
+import { AsideMenu } from '@/components'
 import { Cog8ToothIcon } from '@heroicons/react/20/solid'
 
 const details = [

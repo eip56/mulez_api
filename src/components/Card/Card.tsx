@@ -10,7 +10,7 @@ export default function Card({ children, classNames }: IProps) {
   return (
     <div
       className={clsx(
-        'max-width-full flex h-full max-h-full w-full flex-col overflow-hidden rounded-md border border-white/5 bg-[#1F1F21]',
+        'max-width-full flex h-full max-h-full w-full flex-col overflow-hidden rounded-md border border-white/[0.02] bg-[#121213]',
         {
           [classNames]: classNames
         }
