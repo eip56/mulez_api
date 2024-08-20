@@ -12,10 +12,11 @@ export default function Chip({ label, classNames, size = 'sm' }: IProps) {
   return (
     <span
       className={clsx(
-        'inline-flex items-center rounded-md bg-white/10 px-2 ring-1 ring-inset ring-white/20',
+        'inline-flex items-center rounded-md px-2 ring-1 ring-inset',
         { 'py-0.5 text-[10px]': size === 'sm' },
         { 'py-1 text-xs': !size },
-        { [classNames]: classNames }
+        { [classNames]: classNames },
+        { 'bg-white/10 ring-white/20': !classNames }
       )}>
       {label}
     </span>

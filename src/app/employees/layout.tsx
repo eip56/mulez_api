@@ -4,7 +4,7 @@ export default function Layout({ children }) {
   return (
     <div className="flex h-screen">
       <Navigation />
-      <main className="flex h-screen flex-1 flex-col gap-5 p-4">{children}</main>
+      <main className="flex h-screen flex-1 flex-col gap-5 p-6">{children}</main>
     </div>
   )
 }

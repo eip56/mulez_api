@@ -23,8 +23,8 @@ export default function RecentlyActiveEmployees() {
         <Td>
           <div className="flex items-center gap-4">
             <div className="flex-initial">
-              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#24262E]">
-                <UserIcon className="h-[22px] w-[22px] text-gray-600" />
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#24262E]">
+                <UserIcon className="h-6 w-6 text-gray-600" />
               </span>
             </div>
             <div>

@@ -8,7 +8,7 @@ export default function EmployeeExpense() {
   return (
     <div className="bg-card rounded-md shadow-sm">
       <div className="section-header p-4">
-        <div className="text-white">Employee Expense</div>
+        <div className="text-sm text-white">Employee Expense</div>
       </div>
       <div className="h-64 w-full">
         <ResponsiveContainer width="100%" height="100%">
