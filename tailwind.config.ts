@@ -15,6 +15,7 @@ const config: Config = {
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
       },
       colors: {
+        black: '#000000',
         zero: {
           50: '#f6f8f9',
           100: '#eeeff0',
@@ -63,24 +64,30 @@ const config: Config = {
           800: '#323340',
           900: '#12131f'
         },
-        edge: '#323340' // Primary davy-700 #B8BBC1
+        edge: '#323340', // Primary davy-700 #B8BBC1
+        navbg: '#323236'
       },
       fontSize: {
         xxs: '.625rem',
         xsx: '0.813rem'
       },
+      height: {
+        15: '0.938rem'
+      },
       width: {
+        15: '0.938rem',
+        17: '4.688rem'
+      },
+      padding: {
+        15: '0.938rem',
         17: '4.688rem'
       }
-    }
-  },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio')
-  ]
+    },
+    plugins: [
+      require('@tailwindcss/forms'),
+      require('@tailwindcss/typography'),
+      require('@tailwindcss/aspect-ratio')
+    ]
+  }
 }
 export default config
-
-// border #27292C
-// navbg #1F2124

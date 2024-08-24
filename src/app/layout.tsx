@@ -22,8 +22,8 @@ export default async function RootLayout({
   await dbConnect()
 
   return (
-    <html lang="en" className="dark h-screen">
-      <body className={clsx('dark:bg-zero-900 h-screen', inter.className)}>
+    <html lang="en" className="h-screen">
+      <body className={clsx('h-screen', inter.className)}>
         <GlobalContextProvider>{children}</GlobalContextProvider>
       </body>
     </html>

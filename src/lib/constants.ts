@@ -1,31 +1,30 @@
 import {
-  TrackingIcon,
-  DashboardIcon,
-  OrdersIcon,
-  InventoryIcon,
-  CustomersIcon,
-  VendorsIcon,
-  InvoicesIcon
-} from '../components/Icons/NavIcons'
+  TruckIcon,
+  CubeIcon,
+  CreditCardIcon,
+  UserGroupIcon,
+  SquaresPlusIcon,
+  UserCircleIcon,
+  Cog8ToothIcon
+} from '@heroicons/react/24/outline'
 
-import { TruckIcon } from '@heroicons/react/24/outline'
 interface NavItem {
   label: string
-  href: string
+  path: string
   children?: NavItem[]
-  icon: React.FC | any
+  Icon: React.FC | any
 }
 
 export const navigation: NavItem[] = [
-  { label: 'Dashboard', href: '/dashboard', icon: DashboardIcon },
-  { label: 'Deliveries', href: '/deliveries', icon: TruckIcon },
-  { label: 'Orders', href: '/orders', icon: OrdersIcon },
-  { label: 'Customers', href: '/customers', icon: CustomersIcon },
-  { label: 'Vendors', href: '/vendors', icon: VendorsIcon },
-  { label: 'Logistics', href: '/logistics', icon: TrackingIcon },
-  { label: 'Invoices', href: '/invoices', icon: InvoicesIcon },
-  { label: 'Inventory', href: '/inventory', icon: InventoryIcon }
+  { label: 'Dashboard', path: '/dashboard', Icon: SquaresPlusIcon },
+  { label: 'Deliveries', path: '/deliveries', Icon: TruckIcon },
+  { label: 'Orders', path: '/orders', Icon: CreditCardIcon },
+  { label: 'Inventory', path: '/inventory', Icon: CubeIcon },
+  { label: 'Customers', path: '/customers', Icon: UserCircleIcon },
+  { label: 'Vendors', path: '/vendors', Icon: UserGroupIcon }
 ]
+
+export const bottomNav: NavItem[] = [{ label: 'Settings', path: '/account', Icon: Cog8ToothIcon }]
 
 // Weight Measurements
 export const weightMeasurements = [
