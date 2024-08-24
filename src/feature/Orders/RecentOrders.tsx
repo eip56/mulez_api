@@ -1,88 +1,79 @@
-import { Header, Table, Td, Chip } from '@/components'
-import { EyeIcon, EllipsisHorizontalIcon } from '@heroicons/react/24/outline'
+import { Table, Td, TableActions, Chip } from '@/components'
 import { formatCurrency } from '@/lib'
+import Link from 'next/link'
+
+const status = {
+  New: 'text-green-400 border-green-400',
+  Cancelled: 'text-rose-400 border-rose-400'
+}
 
 export default function RecentOrders() {
   const renderRows = (row: any) => {
     return (
       <tr key={row.id}>
         <Td>{row.orderID}</Td>
-        <Td>{row.name}</Td>
-        <Td>5225 Justin Drive, Albuquerque</Td>
-        <Td>{formatCurrency(row.price)}</Td>
-        <Td>8/8/2024</Td>
+        <Td>{row.createdAt}</Td>
         <Td>
-          <Chip label="New" />
+          <Link href={`/orders/${row.customer}`} className="text-[#3F7BFF]">
+            {row.customer}
+          </Link>
         </Td>
+        <Td>{row.destination}</Td>
+        <Td>{formatCurrency(row.total)}</Td>
+        <Td>{row.items} items</Td>
         <Td>
-          <div className="flex items-center space-x-2">
-            <EyeIcon className="cursor-pointer text-gray-500" />
-            <EllipsisHorizontalIcon className="cursor-pointer text-gray-500" />
-          </div>
+          <Chip label={row.orderStatus} classNames={status[row.orderStatus]} />
+        </Td>
+        <Td>{row.routeID ? row.routeID : '-'}</Td>
+        <Td>
+          <TableActions actions={['view']} />
         </Td>
       </tr>
     )
   }
 
-  return <Table title="Latest Orders" headers={headers} data={data} renderRows={renderRows} />
+  return (
+    <div className="mx-8 rounded-lg border bg-white">
+      <div className="p-4">
+        <h4 className="text-base font-semibold">Recent Orders</h4>
+      </div>
+      <Table headers={headers} data={data} renderRows={renderRows} actions />
+    </div>
+  )
 }
 
 const headers = [
-  { key: 'name', label: 'ID' },
-  { key: 'vendor', label: 'Customer' },
-  { key: 'stock', label: 'Destination' },
-  { key: 'price', label: 'Amount' },
-  { key: 'category', label: 'Delivery Date' },
-  { key: 'revenue', label: 'Status' }
+  { key: 'orderID', label: 'Order ID' },
+  { key: 'createdAt', label: 'Created at' },
+  { key: 'customer', label: 'Customer' },
+  { key: 'destination', label: 'Destination' },
+  { key: 'total', label: 'Total' },
+  { key: 'items', label: 'Items' },
+  { key: 'orderStatus', label: 'Order Status' },
+  { key: 'routeID', label: 'Route ID' }
 ]
 
 const data = [
   {
     id: 1,
-    orderID: 'A56X-6769',
-    name: 'Casey Mcbride',
-    email: 'garnerstephanie@mcbride.com',
-    vendor: "Mr. B's Frosty Flowers",
-    category: 'Flower',
-    price: 25,
-    stock: 100,
-    revenue: 2500,
-    total: 85
+    orderID: 'R56X-6769',
+    createdAt: 'Aug 24, 2024',
+    customer: 'Casey Mcbride',
+    destination: '400 Roma SE, Abq',
+    total: 78.0,
+    items: 3,
+    routeID: null,
+    orderStatus: 'New'
   },
   {
     id: 2,
-    orderID: 'A56X-6769',
-    name: 'Adam Jones',
-    email: 'middletondanielle@gmail.com',
-    vendor: 'Raw Greens',
-    category: 'Flower',
-    price: 20,
-    stock: 30,
-    revenue: 500,
-    total: 85
-  },
-  {
-    id: 3,
-    orderID: 'A56X-6769',
-    name: 'Michael Jones',
-    email: 'russell93@pearson-murphy.com',
-    vendor: 'P37',
-    category: 'Pre-Roll',
-    price: 35,
-    stock: 100,
-    revenue: 2500,
-    total: 85
-  },
-  {
-    id: 4,
-    orderID: 'A56X-6769',
-    name: 'Jill Henry',
-    email: 'rhondaanderson@yahoo.com',
-    vendor: 'WYLD',
-    category: 'Edible',
-    price: 25,
-    stock: 50,
-    revenue: 1500,
-    total: 85
+    orderID: 'R56X-6769',
+    createdAt: 'Aug 24, 2024',
+    customer: 'Johnny Tapia',
+    destination: '4912 Candeleria NE, Abq',
+    total: 28.0,
+    items: 3,
+    routeID: null,
+    orderStatus: 'Cancelled'
   }
 ]

@@ -5,7 +5,9 @@ import {
   UserGroupIcon,
   SquaresPlusIcon,
   UserCircleIcon,
-  Cog8ToothIcon
+  Cog8ToothIcon,
+  CalendarDaysIcon,
+  ShareIcon
 } from '@heroicons/react/24/outline'
 
 interface NavItem {
@@ -22,6 +24,11 @@ export const navigation: NavItem[] = [
   { label: 'Inventory', path: '/inventory', Icon: CubeIcon },
   { label: 'Customers', path: '/customers', Icon: UserCircleIcon },
   { label: 'Vendors', path: '/vendors', Icon: UserGroupIcon }
+]
+
+export const adminNav: NavItem[] = [
+  { label: 'Team', path: '/team', Icon: ShareIcon },
+  { label: 'Schedule', path: '/team', Icon: CalendarDaysIcon }
 ]
 
 export const bottomNav: NavItem[] = [{ label: 'Settings', path: '/account', Icon: Cog8ToothIcon }]

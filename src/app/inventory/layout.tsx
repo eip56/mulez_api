@@ -1,10 +1,13 @@
-import { Navigation } from '@/components'
+import { VerticalMenu, Header } from '@/components'
 
 export default function Layout({ children }) {
   return (
     <div className="flex h-screen">
-      <Navigation />
-      <main className="flex-1">{children}</main>
+      <VerticalMenu />
+      <main className="flex-1">
+        <Header />
+        {children}
+      </main>
     </div>
   )
 }

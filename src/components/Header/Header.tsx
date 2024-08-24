@@ -1,12 +1,9 @@
-import { HeaderProps } from '.'
-import Title from './HeaderTitle'
-import SubNavigation from './SubNavigation'
-import HeaderStats from './HeaderStats'
-
-export default function Header({ children }: HeaderProps) {
-  return <header>{children}</header>
+export default function Header({ title }) {
+  return (
+    <div className="">
+      <div className="p-8">
+        <h1 className="text-2xl font-semibold">{title}</h1>
+      </div>
+    </div>
+  )
 }
-
-Header.Title = Title
-Header.SubNavigation = SubNavigation
-Header.Stats = HeaderStats

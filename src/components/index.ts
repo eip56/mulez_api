@@ -1,9 +1,11 @@
 export { default as Navigation } from './Navigation/Navigation'
+export { default as VerticalMenu } from './Navigation/VerticalMenu'
 export { default as Header } from './Header/Header'
 
 export { default as SimpleTable } from './Table/SimpleTable'
 export { default as Table } from './Table/Table'
 export { default as Td } from './Table/TableData'
+export { default as TableActions } from './Table/TableActions'
 
 export { default as AsideMenu } from './AsideMenu/AsideMenu'
 export { default as Chip } from './Chip/Chip'

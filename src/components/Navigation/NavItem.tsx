@@ -7,8 +7,6 @@ export default function NavItem({ Icon, label, path }) {
   const pathname = usePathname()
   const isActive = pathname === path
 
-  console.log(isActive, path)
-
   return (
     <li className="group relative flex items-center justify-center">
       <Link

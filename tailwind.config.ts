@@ -72,7 +72,8 @@ const config: Config = {
         xsx: '0.813rem'
       },
       height: {
-        15: '0.938rem'
+        15: '0.938rem',
+        4.5: '1.125rem'
       },
       width: {
         15: '0.938rem',
