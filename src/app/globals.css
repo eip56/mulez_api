@@ -18,4 +18,10 @@
     border-style: solid;
     border-color: transparent #535aff transparent transparent;
   }
+
+  .CardTitle {
+    font-size: theme('fontSize.base');
+    font-weight: theme('fontWeight.semibold');
+    flex-grow: theme('flexGrow.1');
+  }
 }
