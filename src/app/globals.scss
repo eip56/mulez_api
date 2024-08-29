@@ -3,11 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-  .VerticalMenu {
-    background: #121212;
-    width: 75px;
-  }
-
   .Tooltip::after {
     content: '';
     position: absolute;
@@ -18,10 +13,10 @@
     border-style: solid;
     border-color: transparent #535aff transparent transparent;
   }
-
-  .CardTitle {
-    font-size: theme('fontSize.base');
-    font-weight: theme('fontWeight.semibold');
-    flex-grow: theme('flexGrow.1');
-  }
 }
+
+// dark #191C20
+// card #202529
+// background: #121212;
+// #F2F4FA light gray
+// #F9FAFD light gray

@@ -1,11 +1,13 @@
 import { VerticalMenu, Header } from '@/components'
-import AppBar from '@/components/Appbar/Appbar'
 
 export default function Layout({ children }) {
   return (
-    <div className="flex h-screen bg-[#F9FAFB]">
+    <div className="flex h-screen">
       <VerticalMenu />
-      <div className="flex-1">{children}</div>
+      <main className="flex-1">
+        <Header title="Style Guide" />
+        {children}
+      </main>
     </div>
   )
 }

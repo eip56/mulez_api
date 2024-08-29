@@ -10,7 +10,7 @@ interface IProps {
   data?: any[]
 }
 
-const thStyles = 'px-6 py-3 text-left text-xs font-semibold text-[#8A8B8C]'
+const thStyles = 'px-6 py-3 text-left text-xs font-medium text-[#8A8B8C]'
 const tdStyles = 'whitespace-nowrap px-6 py-2.5 text-sm text-slate-500'
 
 export default function Table({ colgroup, headers, renderRows, data, actions }: IProps) {

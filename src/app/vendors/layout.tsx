@@ -4,10 +4,7 @@ export default function Layout({ children }) {
   return (
     <div className="flex h-screen">
       <VerticalMenu />
-      <main className="flex-1">
-        <Header title="Vendors" />
-        {children}
-      </main>
+      <div className="flex-1">{children}</div>
     </div>
   )
 }

@@ -12,8 +12,8 @@ export default function NavItem({ Icon, label, path }) {
       <Link
         href={path}
         className={clsx(
-          'hover:bg-navbg relative mb-1 flex w-12 items-center justify-center rounded-lg p-2.5 text-gray-500 transition-colors duration-300 hover:text-white',
-          { 'bg-navbg text-white': isActive }
+          'relative mb-1 flex w-12 items-center justify-center rounded-lg p-2.5 text-gray-500 transition-colors duration-300 hover:bg-gray-100 hover:text-black',
+          { 'bg-gray-100 text-black': isActive }
         )}>
         <i className="h-6 w-6">
           <Icon />

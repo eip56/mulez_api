@@ -10,30 +10,32 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
-      },
       colors: {
         black: '#000000',
-        navbg: '#323236'
+        navbg: '#323236',
+        primary: '#0162FF'
       },
       fontSize: {
-        xxs: '.625rem',
-        smd: '0.938rem',
-        xsx: '0.813rem'
+        10: '.625rem', // 10px
+        13: '0.813rem', // 13px
+        15: '0.938rem' // 15px
       },
       height: {
-        15: '0.938rem',
-        4.5: '1.125rem'
+        15: '0.938rem', // 15px
+        4.5: '1.125rem' // 18px
       },
       width: {
-        15: '0.938rem',
-        17: '4.688rem'
+        15: '0.938rem', // 15px
+        17: '4.688rem' // 75px
       },
       padding: {
-        15: '0.938rem',
-        17: '4.688rem'
+        0.25: '0.188rem', // 3px
+        1.25: '0.313rem', // 5px
+        1.75: '0.438rem', // 7px
+        2.5: '0.563rem', // 9px
+        15: '0.938rem', // 15px
+        5.5: '1.313rem', // 21px
+        17: '4.688rem' // 75px
       }
     },
     plugins: [

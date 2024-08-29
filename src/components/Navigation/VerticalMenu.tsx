@@ -13,7 +13,7 @@ export default function VerticalMenu() {
   const pathname = usePathname()
 
   return (
-    <div className="VerticalMenu">
+    <div className="w-[75px] border-r border-gray-200">
       <nav className="flex h-screen flex-1 flex-col py-4">
         <div className="flex h-16 max-h-16 flex-initial items-center justify-center">
           <span className="h-11 w-11">
@@ -26,7 +26,7 @@ export default function VerticalMenu() {
         <ul className="w-full flex-initial flex-col items-center justify-center">
           <li className="flex items-center justify-center">
             <div className="mb-1 flex h-11 w-12 items-center justify-center p-2.5">
-              <span className="h-0.5 w-full bg-white/10" />
+              <span className="h-0.5 w-full bg-gray-200" />
             </div>
           </li>
 
@@ -38,7 +38,7 @@ export default function VerticalMenu() {
         <ul className="w-full grow flex-col items-center justify-center">
           <li className="flex items-center justify-center">
             <div className="mb-1 flex h-11 w-12 items-center justify-center p-2.5">
-              <span className="h-0.5 w-full bg-white/10" />
+              <span className="h-0.5 w-full bg-gray-200" />
             </div>
           </li>
 
@@ -61,7 +61,7 @@ export default function VerticalMenu() {
 
           <li className="flex items-center justify-center">
             <div className="mb-1 flex h-11 w-12 items-center justify-center p-2.5">
-              <span className="h-0.5 w-full bg-white/10" />
+              <span className="h-0.5 w-full bg-gray-200" />
             </div>
           </li>
 

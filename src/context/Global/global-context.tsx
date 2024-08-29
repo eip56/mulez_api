@@ -8,6 +8,7 @@ interface Props {
 
 interface IState {
   sidebar: boolean
+  mode: string
   setSidebar: () => void
 }
 
@@ -15,7 +16,8 @@ const GlobalContext = React.createContext<IState | null>(null)
 
 export function GlobalContextProvider({ children }: Props) {
   const [state, dispatch]: any = React.useReducer(reducer, {
-    sidebar: false
+    sidebar: false,
+    mode: 'light'
   }) as IState[]
 
   /**
@@ -27,12 +29,17 @@ export function GlobalContextProvider({ children }: Props) {
     dispatch({ type: SET_SIDEBAR })
   }, [])
 
+  const setMode = React.useCallback(() => {
+    dispatch({ type: 'MODE' })
+  }, [])
+
   const value: any = React.useMemo(
     () => ({
       sidebar: state.sidebar,
-      setSidebar
+      setSidebar,
+      setMode
     }),
-    [state, setSidebar]
+    [state, setSidebar, setMode]
   )
 
   return <GlobalContext.Provider value={value}>{children}</GlobalContext.Provider>

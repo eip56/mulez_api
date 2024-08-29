@@ -4,7 +4,7 @@ import dbConnect from '@/lib/db'
 import Navigation from '@/components/Navigation/Navigation'
 import { GlobalContextProvider } from '@/context/Global/global-context'
 import clsx from 'clsx'
-import './globals.css'
+import './globals.scss'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,8 +22,8 @@ export default async function RootLayout({
   await dbConnect()
 
   return (
-    <html lang="en" className="h-screen">
-      <body className={clsx('h-screen', inter.className)}>
+    <html lang="en" className={clsx('h-screen')}>
+      <body className={clsx('h-screen dark:bg-[#191C20]', inter.className)}>
         <GlobalContextProvider>{children}</GlobalContextProvider>
       </body>
     </html>
